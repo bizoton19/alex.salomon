@@ -1,4 +1,27 @@
-baseURL = "http://example.org/"
+baseURL = "https://bizoton19.github.io"
 languageCode = "en-us"
-title = "Avg Programmer"
+title = "alex.salomon"
 theme = "beautifulhugo"
+pygmentsUseClasses = true
+pygmentCodeFences = true
+metaDataFormat = "yaml"
+
+#[[Params.image]]
+#  src = "img/infra.png"
+#  desc = "cloud"
+
+[Params]
+    logo="https://avatars2.githubusercontent.com/u/1896566?s=400&u=a237a69974cb51c9cc143a30f387e9a5a720cfb8&v=4"
+    dateFormat = "January 2, 2006"
+    commit = false
+
+[[menu.main]]
+    name = "Blog"
+    url = "posts/"
+    weight = 1
+
+
+[[menu.main]]
+    name = "Tags"
+    url = "tags"
+    weight = 3
