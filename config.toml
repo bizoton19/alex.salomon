@@ -25,3 +25,9 @@ metaDataFormat = "yaml"
     name = "Tags"
     url = "tags"
     weight = 3
+
+[Author]
+  name = "Alex Salomon"
+  github = "bizoton19"
+  twitter = "lex_salomon"
+  

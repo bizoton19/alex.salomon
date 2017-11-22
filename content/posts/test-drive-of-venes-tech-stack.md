@@ -26,7 +26,7 @@ To experiment in the cloud's free tiers, without switching to dotnet core (which
  The idea was to decouple the web front end with the server at development time so that it’s possible to fiddle with different Elasticsearch clients to see which was a better fit for the server side API. The technology behind the api that would proxy the Elasticsearch interfaces is written in NodeJS. The choice was between NodeJS and Golang Follow along and i’ll tell you why later.
 The infrastructure is composed of Heroku for hosting the web app, mlab for possible user management and metrics storage (this could be Postgres, have not decided) and AWS elasticsearch OR elasticcloud, both are eventually on AWS but one is fully managed by the elastic team and one is fully managed by AWS elasticsearch service.
 
-![Crepe](https://cdn-images-1.medium.com/max/1000/1*Nv5lzr5wyRBLUGOCZIwKqA@2x.png)
+![infrastructure](/images/arch.png)
 
 
 
