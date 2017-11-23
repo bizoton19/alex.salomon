@@ -1,19 +1,22 @@
-baseURL = "https://tender-bhaskara-6945ec.netlify.com"
+baseURL = "https://tender-bhaskara-6945ec.netlify.com/"
 languageCode = "en-us"
 title = "alex.salomon"
 theme = "beautifulhugo"
 pygmentsUseClasses = true
 pygmentCodeFences = true
 metaDataFormat = "yaml"
+rss = true
+comments = true
 
-#[[Params.image]]
-#  src = "img/infra.png"
-#  desc = "cloud"
+
 
 [Params]
     logo="https://avatars2.githubusercontent.com/u/1896566?s=400&u=a237a69974cb51c9cc143a30f387e9a5a720cfb8&v=4"
     dateFormat = "January 2, 2006"
     commit = false
+    rss = true
+    comments = true
+    #  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
 
 [[menu.main]]
     name = "Blog"
