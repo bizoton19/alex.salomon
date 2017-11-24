@@ -6,6 +6,8 @@ pygmentsUseClasses = true
 pygmentCodeFences = true
 metaDataFormat = "yaml"
 rss = true
+twitter = true
+ github = true
 comments = true
 
 [taxonomies]
