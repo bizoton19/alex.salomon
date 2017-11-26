@@ -2,9 +2,10 @@
 title: "Test drive of VENES stack for searching open datasets -Part 1"
 subtitle: "Hosted on a diverse cloud infrastructure "
 date: 2017-11-15T00:58:09-05:00
+categories: [Projects]
 tags: ["vue", "elasticsearch","heroku","nodejs","aws","cloud","express"]
-draft: true
-image: "/img/infra.jpg.jpg"
+draft: false
+images: ["/img/arch.png"]
 ---
 ### What is VENES?
 **V**::Vuejs| 

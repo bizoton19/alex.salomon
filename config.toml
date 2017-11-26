@@ -1,6 +1,6 @@
 baseURL = "https://tender-bhaskara-6945ec.netlify.com/"
 languageCode = "en-us"
-title = "alex.salomon"
+title = "avg.programmer"
 theme = "beautifulhugo"
 pygmentsUseClasses = true
 pygmentCodeFences = true
@@ -9,10 +9,6 @@ rss = true
 twitter = true
 github = true
 comments = true
-
-[taxonomies]
-  tag = "tags"
-  post = "posts"
   
 
 [Params]
@@ -33,6 +29,11 @@ comments = true
     name = "Tags"
     url = "tags/"
     weight = 3
+
+[[menu.main]]
+    name = "Categories"
+    url = "categories/"
+    weight = 2
 
 [Author]
   name = "Alex Salomon"

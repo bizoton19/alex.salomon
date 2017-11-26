@@ -1,14 +1,78 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on alex.salomon</title>
+    <title>Tags on avg.programmer</title>
     <link>https://tender-bhaskara-6945ec.netlify.com/tags/</link>
-    <description>Recent content in Tags on alex.salomon</description>
+    <description>Recent content in Tags on avg.programmer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Wed, 15 Nov 2017 00:58:09 -0500</lastBuildDate>
     
 	<atom:link href="https://tender-bhaskara-6945ec.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Aws</title>
+      <link>https://tender-bhaskara-6945ec.netlify.com/tags/aws/</link>
+      <pubDate>Wed, 15 Nov 2017 00:58:09 -0500</pubDate>
+      
+      <guid>https://tender-bhaskara-6945ec.netlify.com/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cloud</title>
+      <link>https://tender-bhaskara-6945ec.netlify.com/tags/cloud/</link>
+      <pubDate>Wed, 15 Nov 2017 00:58:09 -0500</pubDate>
+      
+      <guid>https://tender-bhaskara-6945ec.netlify.com/tags/cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Elasticsearch</title>
+      <link>https://tender-bhaskara-6945ec.netlify.com/tags/elasticsearch/</link>
+      <pubDate>Wed, 15 Nov 2017 00:58:09 -0500</pubDate>
+      
+      <guid>https://tender-bhaskara-6945ec.netlify.com/tags/elasticsearch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Express</title>
+      <link>https://tender-bhaskara-6945ec.netlify.com/tags/express/</link>
+      <pubDate>Wed, 15 Nov 2017 00:58:09 -0500</pubDate>
+      
+      <guid>https://tender-bhaskara-6945ec.netlify.com/tags/express/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Heroku</title>
+      <link>https://tender-bhaskara-6945ec.netlify.com/tags/heroku/</link>
+      <pubDate>Wed, 15 Nov 2017 00:58:09 -0500</pubDate>
+      
+      <guid>https://tender-bhaskara-6945ec.netlify.com/tags/heroku/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nodejs</title>
+      <link>https://tender-bhaskara-6945ec.netlify.com/tags/nodejs/</link>
+      <pubDate>Wed, 15 Nov 2017 00:58:09 -0500</pubDate>
+      
+      <guid>https://tender-bhaskara-6945ec.netlify.com/tags/nodejs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vue</title>
+      <link>https://tender-bhaskara-6945ec.netlify.com/tags/vue/</link>
+      <pubDate>Wed, 15 Nov 2017 00:58:09 -0500</pubDate>
+      
+      <guid>https://tender-bhaskara-6945ec.netlify.com/tags/vue/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
