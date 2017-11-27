@@ -15,8 +15,10 @@ comments = true
     dateFormat = "January 2, 2006"
     commit = false
     rss = true
+    github= true
+    twitter= true
     comments = true
-    useChroma = true
+    useChroma = false
     #  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
 
 [[menu.main]]
