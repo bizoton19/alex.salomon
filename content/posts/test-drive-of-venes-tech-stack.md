@@ -5,13 +5,13 @@ date: 2017-11-15T00:58:09-05:00
 categories: [Projects]
 tags: ["vue", "elasticsearch","heroku","nodejs","aws","cloud","express"]
 draft: false
-images: ["/img/arch.png"]
 ---
 ### What is VENES?
 **V**::Vuejs| 
 **E**::Express| 
 **N**::Nodejs|
 **ES**::Elasticsearch
+![stack](/img/venes.png)
 ### What we’re building
 Given several open data sets or dataset apis, the idea is to extract the datasets, transform and load them into an [Elasticsearch](https://www.elastic.co/) cluster for fast searches via the Elasticsearch api. Users should be able to type in terms in a text box, google search style, and get instant relevant hits, then they should be able to narrow down their choices using some filtering mechanism. The ultimate vision is to have a more artifact focused search where users can search on a particular dataset, say recalls, and perform custom searches on it. With that said, the infrastructure choices needed to be carefully considered based on ease of use and cost.
 
@@ -27,7 +27,7 @@ To experiment in the cloud's free tiers, without switching to dotnet core (which
  The idea was to decouple the web front end with the server at development time so that it’s possible to fiddle with different Elasticsearch clients to see which was a better fit for the server side API. The technology behind the api that would proxy the Elasticsearch interfaces is written in NodeJS. The choice was between NodeJS and Golang Follow along and i’ll tell you why later.
 The infrastructure is composed of Heroku for hosting the web app, mlab for possible user management and metrics storage (this could be Postgres, have not decided) and AWS elasticsearch OR elasticcloud, both are eventually on AWS but one is fully managed by the elastic team and one is fully managed by AWS elasticsearch service.
 
-![infrastructure](/images/arch.png)
+![infrastructure](/img/infra.png)
 
 
 
