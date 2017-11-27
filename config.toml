@@ -7,7 +7,7 @@ pygmentCodeFences = true
 metaDataFormat = "yaml"
 rss = true
 twitter = true
- github = true
+github = true
 comments = true
   
 
