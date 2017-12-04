@@ -1,6 +1,10 @@
 baseURL = "http://www.bilomax.com/"
 languageCode = "en-us"
-title = "avg.programmer"
+<<<<<<< HEAD
+title = "Alex Salomon's blog"
+=======
+title = "alex.salomon"
+>>>>>>> d38879fd8b2736af39e7266431e13a8ae53ae516
 theme = "beautifulhugo"
 pygmentsUseClasses = true
 pygmentCodeFences = true
