@@ -128,11 +128,14 @@ bodybuilder()
         .andFilter('terms', '_type', 'neissreport')
         .andFilter('range', 'artifactDate', [{ to: '2009-09-26' }, { from: '1970-09-20' }])
         .sort('_type','desc')
-        .sort('_artifactDate','desc')
+        .sort('artifactDate','desc')
         .aggregation('terms', 'type.keyword')
         .aggregation('terms','artifactSource.keyword')
         .build()
 ```
 A quick and simple example of how the UI populating the query would look like : https://codepen.io/bizoton19/pen/VraadN
+
+<p data-height="265" data-theme-id="light" data-slug-hash="VraadN" data-default-tab="html" data-user="bizoton19" data-embed-version="2" data-pen-title="VraadN" class="codepen">See the Pen <a href="https://codepen.io/bizoton19/pen/VraadN/">VraadN</a> by Alexandre Salomon (<a href="https://codepen.io/bizoton19">@bizoton19</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 
