@@ -112,11 +112,12 @@ I chose Nodejs because well, Javascript… I really started with Golang but the 
 This elasticsearch query performs a search where the word fire is present, the `match all` directive tells elasticsearch to looks for "fire" in every field in the document that has text and then perform a filter on the result where the only data that gets return are of type "neissreport" AND are between 1970 and 2009. The data is then sorted by type and artifact date. Then an aggregation is also returned, it retrieved the number of indexed documents that meet all the conditions of the aggregation (grouping)
 If you are familiar with `SQL` then this would sort of be :
 ```sql
-select [fields] from index_name 
-Where fulltext_field LIKE '%fire%'
+SELECT [fields] FROM index_name 
+WHERE fulltext_field LIKE '%fire%'
 AND _type = 'neissreport'
 AND artifactDate BETWEEN '1970-09-20' AND '2009-09-26'
 GROUP BY artifact_Source, artifact_type
+ORDER BY _type, artifactDate DESC
 ```
 The only difference is that, this query would not run in SQL because you have to specified the fields that are going to be grouped and you can really mix aggregation queries with resultset queries in plain SQL. You'de have to write a stored procedure.
 
