@@ -109,7 +109,7 @@ I chose Nodejs because well, Javascript… I really started with Golang but the 
 
 {{</ highlight >}}
 
-This elasticsearch query performs a search where the word fire is present, the `match all` directive tells elasticsearch to looks for "fire" in every field in the document that has text and then perform a filter on the result where the only data that gets return are of type "neissreport" AND are between 1970 and 2009. The data is then sorted by type and artifact date. Then an aggregation is also returned, it retrieved the number of indexed documents that meet all the conditions of the aggregation (grouping)
+This elasticsearch query performs a search where the word *fire* is present, the `match all` directive tells elasticsearch to looks for *fire* in every field in the document that has text data and then perform a filter on the result where the only data that gets return are of type "neissreport" AND are between 1970 and 2009. The data is then sorted by type and artifact date. Then an aggregation is also returned, it retrieves the number of indexed documents that meet all the conditions of the aggregation (grouping)
 If you are familiar with `SQL` then this would sort of be :
 ```sql
 SELECT [fields] FROM index_name 
@@ -119,9 +119,20 @@ AND artifactDate BETWEEN '1970-09-20' AND '2009-09-26'
 GROUP BY artifact_Source, artifact_type
 ORDER BY _type, artifactDate DESC
 ```
-The only difference is that, this query would not run in SQL because you have to specified the fields that are going to be grouped and you can really mix aggregation queries with resultset queries in plain SQL. You'de have to write a stored procedure.
+The only difference is that, this query would not run in the SQL engine because you have to specify the fields that are going to be grouped and you can really mix aggregation queries with resultset queries in plain SQL. You'de have to write a stored procedure.
 
-In part 2 or 3 of this blog, i will talk about using the [bodybuilder](http://bodybuilder.js.org/) javascript package that reduces the size of the json query and makes it more legible.
-
+In part 2 or 3 of this blog, i will talk about using the [bodybuilder](http://bodybuilder.js.org/) javascript package that reduces the size of the json query and makes it more legible, like so :
+```javascript
+bodybuilder()
+        .query('match', '_all', 'fire')
+        .andFilter('terms', '_type', 'neissreport')
+        .andFilter('range', 'artifactDate', [{ to: '2009-09-26' }, { from: '1970-09-20' }])
+        .sort('_type','desc')
+        .sort('_artifactDate','desc')
+        .aggregation('terms', 'type.keyword')
+        .aggregation('terms','artifactSource.keyword')
+        .build()
+```
+A quick and simple example of how the UI populating the query would look like : https://codepen.io/bizoton19/pen/VraadN
 
 
