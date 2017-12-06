@@ -7,10 +7,10 @@ tags: ["vue", "elasticsearch","heroku","nodejs","aws","cloud","express"]
 draft: false
 ---
 ### What is VENES?
-**V**::Vuejs| 
-**E**::Express| 
-**N**::Nodejs|
-**ES**::Elasticsearch
+**V**  [Vuejs](https://vuejs.org/)| 
+**E**  [Express](https://expressjs.com/)| 
+**N**  [Nodejs](https://nodejs.org/en/)|
+**ES** [Elasticsearch](https://www.elastic.co/products/elasticsearch)
 ![stack](/img/venes.png)
 ### What we’re building
 Given several open data sets or dataset apis, the idea is to extract the datasets, transform and load them into an [Elasticsearch](https://www.elastic.co/) cluster for fast searches via the Elasticsearch api. Users should be able to type in terms in a text box, google search style, and get instant relevant hits, then they should be able to narrow down their choices using some filtering mechanism. The ultimate vision is to have a more artifact focused search where users can search on a particular dataset, say recalls, and perform more focused searches.
