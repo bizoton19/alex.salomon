@@ -17,8 +17,7 @@ Given several open data sets or dataset apis, the idea is to extract the dataset
 
 ### Why build it?
 Building it out of curiosity really. I noticed a lot of text heavy datasets were being exposed as APIs by different organizations and agencies but there wasn’t a way to search across all the different apis. There a few reasons why I wanted to build a full unified search application:
-The real interest was when I started evaluating [Solr vs Elasticsearch](https://logz.io/blog/solr-vs-elasticsearch/) in 2016 and was really impressed by both tools, but what the elastic team has built I thought was more than a search engine, it was a powerful and flexible platform. I’m usually skeptical of any tool that tries to do and be everything under the sun but the different elastic tools that complement elasticsearch, do their job very well. I needed to get familiar with the [Elasticsearch DSL](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-filter-context.html), or at least enough of it where I can build these aggregations/facets and filters using a modern web UI framework.
-
+The first reason is because i can and all these wonderful software tools are free. I needed to get familiar with the [Elasticsearch DSL](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-filter-context.html), or at least enough of it where I can build these aggregations/facets and filters using a modern web UI framework. The other reason is a learning experience which involves new web tools, different cloud environments for development/hosting and get some real work done with elasticsearch.
 
 
 ### The Technology Stack & Architecture
@@ -38,18 +37,18 @@ The infrastructure is composed of Heroku for hosting the web app, mlab for possi
 Even tough i believe [Angular 2](https://angular.io/) is a nice upgrade from AngularJS with the introduction of Typescript and i understand the goal, the framework demanded me to commit and conform too much to a particular style of building apps. If i were building this app within a large team, specially within an organisation, Angular would be my go to language for because the default design of the framework's api mirror the n-tier layered architecure and design patterns that developers have been using in `Java` and `C#` for a long time.
 Writing Angular, the right way, the Angular way can be very elegant and easy to maintain in the long run. Now look at [how to get started with Angular: ](https://angular.io/guide/quickstart#devenv):
 
-##### Step 1. Set up Your Machine
+##### Step 1. Set up Your Machine (must have NPM installed)
 ```
 npm install -g @angular/cli
 ```
-##### Step 2. Create new Project
+##### Step 2. Create new Project 
 ```
 ng new ang-app
 ```
 #### Aurelia 
 [Aurelia](http://aurelia.io/) with typescript was very similar to Angular but it opted for present and future ECMAscript syntax. I thought it was great, if Aurelia had the support of Angular, i would chose Aurelia over Angular for building large apps with large teams within an organisation. The support is fanstastic but depending on the organisation, they tend to go with the products that are backed by the biggest companies. [The getting started](http://aurelia.io/docs/tutorials/creating-a-todo-app):
 
-##### Step 1. Set up Your Machine
+##### Step 1. Set up Your Machine (must have NPM installed)
 ```
 npm install -aurelia-cli -g
 ```
@@ -85,6 +84,19 @@ Running your html file should now show you
 ```
 Hello Vue!
 ```
+
+
+#### Alternatively, use the `vue-cli` for users familiar with nodejs and it's build tools
+
+##### Step 1. Set up Your Machine (must have NPM installed)
+```
+npm install --global vue-cli
+```
+##### Step 2. Create new project
+```
+vue init webpack vue-app
+```
+
 Here is a teaser of what the current Vue js based search page looks like i showed the json data at the end of the gif because even though the search page is deployed to Heroku, my elasticsearch instance is still local and the api proxy to elasticsearch is not yet ready:
 
 ![stack](/img/ui-teaser.gif)
@@ -102,7 +114,7 @@ I chose Nodejs because well, Javascript… I originally started with Golang but 
 
                 {
                     "match": {
-                        "_all": "fire"
+                        "_all": "poison"
                     }
                 }
             ],
@@ -111,7 +123,7 @@ I chose Nodejs because well, Javascript… I originally started with Golang but 
                 "bool": {
                     "must": [{
                             "terms": {
-                                "_type": ["neissreport"]
+                                "_type": ["fdarecall"]
                             }
 
                         },
@@ -161,8 +173,8 @@ This elasticsearch query performs a search where the word *fire* is present, the
 In `SQL` syntax the equivalent would roughly be :
 ```sql
 SELECT [fields] FROM index_name 
-WHERE fulltext_field LIKE '%fire%'
-AND _type = 'neissreport'
+WHERE fulltext_field LIKE '%poison%'
+AND _type = 'fdarecall'
 AND artifactDate BETWEEN '1970-09-20' AND '2009-09-26'
 GROUP BY artifact_Source, artifact_type
 ORDER BY _type, artifactDate DESC
@@ -172,8 +184,8 @@ The only difference is that, this query would **NOT** run in the SQL engine beca
 We can even reduce the verbosity of the Json queries with the [bodybuilder](http://bodybuilder.js.org/) javascript package  like so :
 ```javascript
 bodybuilder()
-        .query('match', '_all', 'fire')
-        .andFilter('terms', '_type', 'neissreport')
+        .query('match', '_all', 'poison')
+        .andFilter('terms', '_type', 'fdarecall')
         .andFilter('range', 'artifactDate', [{ to: '2009-09-26' }, { from: '1970-09-20' }])
         .sort('_type','desc')
         .sort('artifactDate','desc')
