@@ -172,8 +172,8 @@ I chose Nodejs because well, Javascript… I originally started with Golang but 
 {{</ highlight >}}
 
 This elasticsearch query performs a search where the word *fire* is present, the `"match": {
-                    "_all": "fire"
-                }` directive tells elasticsearch to look for the word *fire* in every field in the document that has text data and then perform a filter on the result where the only data that gets return are of type "neissreport" AND are between 1970 and 2009. The data is then sorted by type and artifact date. Then an aggregation object is also returned which retrieves the number of indexed documents that meet all the conditions of the aggregation (grouping)
+                    "_all": "poison"
+                }` directive tells elasticsearch to look for the word *poison* in every field in the document that has text data and then perform a filter on the result where the only data that gets return are of type "fdarecall" `AND are between 1970 and 2009. The data is then sorted by type and artifact date. Then an aggregation object is also returned which retrieves the number of indexed documents that meet all the conditions of the aggregation
 In `SQL` syntax the equivalent would roughly be :
 ```sql
 SELECT [fields] FROM index_name 
