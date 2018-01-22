@@ -1,7 +1,7 @@
 ---
 title: "About Me"
 date: 2018-01-20T13:11:36-05:00
-draft: true
+draft: false
 ---
 ---
 ### Contact Info
@@ -25,6 +25,7 @@ Bachelor of Science in Management Information Systems
 
 ***Major Frameworks*** : Spring MVC, ASP.NET, ASP.NET MVC, Spark, xUnit, Vue.js, Angular 2, NodeJs, Azure Functions
 
+***Build Tools*** : Maven, SBT, Cake, MSBuild, Webpack/NPM
 
 ### Professional Experience
 ---
@@ -36,7 +37,6 @@ Bachelor of Science in Management Information Systems
 **Strategy and Standards:**
 
 * Proposed and lead the agency’s Restful web api architecture guide for the open data initiative.
-* Lead the design of the first performant restful service for the open data initiative.
 * Suggested and developed the central user authentication microservice of the agency.
 * Promoted and defended the use of lightweight message based communication between systems for sharing data as opposed to numerous scheduled ETL jobs.
 * Implemented lightweight contextual end point monitoring for all of the agency’s public facing sites using *Azure Functions & sendGrid*.
