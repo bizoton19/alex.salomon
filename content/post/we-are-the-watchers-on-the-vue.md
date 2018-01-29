@@ -6,3 +6,5 @@ tags: ["vue", "watchers","javascript","async"]
 draft: true
 ---
 
+### What are watchers in Vue?
+The vue documentation

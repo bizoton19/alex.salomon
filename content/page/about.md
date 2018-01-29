@@ -75,11 +75,8 @@ Implementing Multi-lingual features using local and global resource files.
 ***Sept 09, 2009 to Jan 9,2015***: 
 
 Social Security Administration Headquarters  
-Office of the Deputy Commissioner of System
-
+Office Enterprise Architecture & Software Engineering 
 6401 Security Boulevard Woodlawn, MD 21235
-Supervisor: Seehafer, Faye 
-Supervisor Phone: 410-596-3250
 
 ***Role: Software Engineer***
 
@@ -89,21 +86,20 @@ Supervisor Phone: 410-596-3250
 * I Engineered the API to the Enterprise Metadata Repository which uses complex communication sequences to pull data from source code manager residing on the Z/os platform to the Windows environment using technologies such as WebSphere MQ for Java, SOAP web services and TCP/IP.
 * I designed and implemented an ASP.NET MVC application that allows users to upload their COBOL source code packages for scanning or request a specific set of COBOL or Assembler programs to be scanned and loaded in the repository for impact analysis.
 
-***Team Development***
-
-I designed and implemented naming standards for package, namespace and entity names for standardize coding practices.
 
 ***Intranet/Web***
 
 * I implemented the enterprise metadata search engine based of the Lucene API
 * I modeled the components  participating in the extraction of data from multiple sources using a data structure inheritance model which allows all indexed data to be searched on by a google like search ASP.Net web interface using the agency’s enterprise user experience framework with 508 compliancy.
-Databases
+
+***Data***
+
 * I have worked with Database Administrators to design, develop and/or update databases as they relate to web applications. 
 * Collaborate with the database support branch to manage and develop new database structures in DB2 for the enterprise metadata repository in a coordinated fashion then migrate the changes up the lifecycle after regression testing.
 * I have worked with database administrators to design, implement and test reuse rule stored procedures.
 * I have worked with the database administrators and enterprise data architect to design and develop the enterprise metadata load database (SQL Server) which includes entities that house information for batch processing loads and tables that help drive the intranet load automation website.
-* In preparing for a possible end of life of the CA repository metadata management tool, I researched, proposed and developed a pluggable metamodel architecture that will be the controlling schema for a schemaless NoSQL graph database (Neo4j).  
----
+* In preparing for a possible end of life of the CA repository metadata management tool, I researched, proposed and developed a pluggable metamodel architecture.
+
 
 Sept 21, 2004 to 2009: Valencia Community College, Enrollment Services, Orlando, FL
 
