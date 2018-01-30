@@ -13,8 +13,9 @@ In other words when you want to perform an action based on a data change, using 
 
 ### Under the hood
 "When you have some data that needs to change based on some other data" usually means you need a watcher or in server side programming we call this an observer, the only thing is that in vue, the watcher is a property called `watch`, it doesn't maintain a list of subject or property names to observe and react or notify another component when they change. Instead the watcher only watches a single property. The general rules are:
-1. The watcher has to have the same name as the data property being watched
-2  the watcher has to perform an action such as calling a method that's part of the component or an external operation.
+
+1. The watcher has to have the same name as the data property being watched.
+2. the watcher has to perform an action such as calling a method that's part of the component or an external operation.
 
 ### Example
 In this example, there is a watcher setup which essentially observes the `pageSelected` property of the component. The `pageselected` property gets updated by the event  on that search-pagination child component. When a new page number is a selected in the child component, the page number gets propagated to the search parent component then, the watcher detect the changes before calling the search function with the new page number.
