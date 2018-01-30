@@ -38,7 +38,6 @@ In this example, there is a watcher setup which essentially observes the `pageSe
 </template>
 <script>
 import searchPagination from "./SearchPagination.vue";
-import { eventBus } from "../main";
 
 export default {
   name: "search",
