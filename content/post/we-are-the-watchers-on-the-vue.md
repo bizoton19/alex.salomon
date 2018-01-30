@@ -19,33 +19,20 @@ In other words when you want to perform an action based on a data change, using 
 ### Example
 
 ```
+<script>
+import searchPagination from "./SearchPagination.vue";
+import { eventBus } from "../main";
 
+export default {
+  name: "search",
+  components: {
+    searchPagination,
+  },
 data: function() {
     return {
-      stats: {
-        took: Number,
-        total: Number,
-        totalPages: Number,
-        maxScore: Number,
-        resultCount: Number
-      },
+     
       pageselected:1,
-      searchSettings: {
-        size: 10,
-        from: Number,
-        dataType: String
-      },
       
-      
-      response: null,
-      dataTypes: [],
-      //searchInput: null,//moved to parent comp
-      hasResults: false,
-      isSearchComplete: false,
-      searchButtonclicked: false,
-      fetchStatus: null,
-      responseEvent: null,
-      wasComponentUpdated: false
     };
   },
 watch: {
@@ -57,4 +44,6 @@ watch: {
       that.search(that.searchinput)
     }
   }
+}
+</script>
 ```
