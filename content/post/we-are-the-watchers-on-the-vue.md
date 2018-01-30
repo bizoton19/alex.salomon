@@ -9,6 +9,7 @@ draft: true
 ### What are watchers in Vue?
 The Vue documentation describes watchers as a 
 > generic way to react to data changes through the watch option. This is most useful when you want to perform asynchronous or expensive operations in response to changing data.
+---
 In other words when you want to perform an action based on a data change, using watchers are more appropriate. This would certainly be true per example if you are passing data from a parent to a child component where the data being passed is going to be part of a `submit()` operation that calls an api to do a `POST`.
 
 ### Under the hood
