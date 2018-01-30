@@ -70,3 +70,4 @@ watch: {
 }
 </script>
 ```
+This component was simplified, the full code and the `searchPagination` code can be found [here](https://github.com/bizoton19/open-data-search-vuejs/blob/master/src/components/SearchPagination.vue)
