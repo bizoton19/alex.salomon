@@ -18,7 +18,7 @@ In other words when you want to perform an action based on a data change, using 
 2  the watcher has to perform an action such as calling a method that's part of the component or an external operation.
 
 ### Example
-
+In this example, there is a watcher setup which essentially observes the `pageSelected` property of the component. The `pageselected` property gets updated by the event  on that search-pagination child component. When a new page number is a selected in the child component, the page number gets propagated to the search parent component then, the watcher detect the changes before calling the search function with the new page number.
 ```
 <template>
 
