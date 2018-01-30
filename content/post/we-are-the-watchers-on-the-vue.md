@@ -20,6 +20,22 @@ In other words when you want to perform an action based on a data change, using 
 ### Example
 
 ```
+<template>
+
+   
+  <div id="search">
+    
+    <search-pagination 
+     v-if="hasResults" 
+    :totalPages="stats.totalPages"
+    :currPage="pageselected"
+     @pageSelected="pageselected=$event">
+    </search-pagination>
+    
+   
+  </div>
+  
+</template>
 <script>
 import searchPagination from "./SearchPagination.vue";
 import { eventBus } from "../main";
@@ -31,8 +47,14 @@ export default {
   },
 data: function() {
     return {
-     
-      pageselected:1,
+     stats: {
+        took: Number,
+        total: Number,
+        totalPages: Number,
+        maxScore: Number,
+        resultCount: Number
+      },
+      pageselected:1
       
     };
   },
