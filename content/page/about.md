@@ -7,7 +7,6 @@ draft: false
 ### Contact Info
 9900 Georgia Ave unit 201
 Silver Spring, MD 20920 
-Phone: (407)701-3140 
 bizoton19@gmail.com
 
 ### Education
