@@ -12,7 +12,7 @@ The Vue documentation describes watchers as a generic way to react to data chang
 In other words when you want to perform an action based on a data change, using watchers are more appropriate. This would certainly be true per example if you are passing data from a parent to a child component where the data being passed is going to be part of a `submit()` operation that calls an api to do a `POST`.
 
 ### Under the hood
-"When you have some data that needs to change based on some other data" usually means you need a watcher or in server side programming this can also be refered to as an observer, the only thing is that in vue, the watcher is a property called `watch`, it doesn't maintain a list of subject or property names to observe and react or notify another component when they change. Instead the watcher only watches a single property. The general rules are:
+"When you have some data that needs to change based on some other data" usually means you need a watcher or in server side programming this can also be refered to as an observer, the only thing is that in vue, the watcher is a property called `watch`, it doesn't maintain a list of subjects to observe and  notify another component when they change. Instead the observer and the observed have 1:1 relationship. The general rules are:
 
 1. The watcher has to have the same name as the data property being watched.
 2. the watcher has to perform an action such as calling a method that's part of the component or an external operation.
