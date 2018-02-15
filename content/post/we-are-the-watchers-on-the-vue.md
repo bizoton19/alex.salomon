@@ -5,7 +5,7 @@ categories: [Projects, Technology, Programming]
 tags: ["vue", "watchers","javascript","async"]
 draft: false
 ---
-
+ ![watchers](https://media.giphy.com/media/3oEdv0Hf4Lr3fn6aGc/giphy.gif)
 ### What are watchers in Vue?
 The Vue documentation describes watchers as a generic way to react to data changes through the watch option.
 
@@ -18,7 +18,7 @@ In other words when you want to perform an action based on a data change, using 
 2. the watcher has to perform an action such as calling a method that's part of the component or an external operation.
 
 ### Example
-In this example, there is a watcher setup which essentially observes the `pageSelected` property of the component. The `pageselected` property gets updated by the event  on that `search-pagination` (the only html markup in the code example below) child component. When a new page number is a selected in the child component, the page number gets propagated to the parent component and then, the watcher detects the new value of the bound property, `pageSelected`,  before calling the `search(page)` function and passing it the new page.
+In this example, there is a watcher setup which essentially observes the `pageSelected` property of the component. The `pageselected` property gets updated by the event on that `search-pagination` (the only html markup in the code example below) child component. When a new page number is a selected in the child component, the page number gets propagated to the parent component and then, the watcher detects the new value of the bound property, `pageSelected`,  before calling the `search(page)` function and passing it the new page.
 
 ```html
 
