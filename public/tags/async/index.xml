@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Async on Alex&#39;s blog</title>
+    <link>http://www.afsalomon.com/tags/async/</link>
+    <description>Recent content in Async on Alex&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 10 Dec 2017 22:14:49 -0500</lastBuildDate>
+    
+	<atom:link href="http://www.afsalomon.com/tags/async/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>We Are the Watchers on the Vue</title>
+      <link>http://www.afsalomon.com/post/we-are-the-watchers-on-the-vue/</link>
+      <pubDate>Sun, 10 Dec 2017 22:14:49 -0500</pubDate>
+      
+      <guid>http://www.afsalomon.com/post/we-are-the-watchers-on-the-vue/</guid>
+      <description>What are watchers in Vue? The Vue documentation describes watchers as a generic way to react to data changes through the watch option.
+In other words when you want to perform an action based on a data change, using watchers are more appropriate. This would certainly be true per example if you are passing data from a parent to a child component where the data being passed is going to be part of a submit() operation that calls an api to do a POST.</description>
+    </item>
+    
+  </channel>
+</rss>

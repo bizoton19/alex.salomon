@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Alex&#39;s blog</title>
+    <link>http://www.afsalomon.com/post/</link>
+    <description>Recent content in Posts on Alex&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 10 Dec 2017 22:14:49 -0500</lastBuildDate>
+    
+	<atom:link href="http://www.afsalomon.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>We Are the Watchers on the Vue</title>
+      <link>http://www.afsalomon.com/post/we-are-the-watchers-on-the-vue/</link>
+      <pubDate>Sun, 10 Dec 2017 22:14:49 -0500</pubDate>
+      
+      <guid>http://www.afsalomon.com/post/we-are-the-watchers-on-the-vue/</guid>
+      <description>What are watchers in Vue? The Vue documentation describes watchers as a generic way to react to data changes through the watch option.
+In other words when you want to perform an action based on a data change, using watchers are more appropriate. This would certainly be true per example if you are passing data from a parent to a child component where the data being passed is going to be part of a submit() operation that calls an api to do a POST.</description>
+    </item>
+    
+    <item>
+      <title>The Evolution of the Many Faced for Loop</title>
+      <link>http://www.afsalomon.com/post/the-evolution-of-the-many-faced-for-loop/</link>
+      <pubDate>Sun, 03 Dec 2017 21:52:01 -0500</pubDate>
+      
+      <guid>http://www.afsalomon.com/post/the-evolution-of-the-many-faced-for-loop/</guid>
+      <description> What are loops? In it&amp;rsquo;s simplest form, a loop is a an action that&amp;rsquo;s being repeated over a period of time or given a specific condition.
+Examples The For loops The functional for loops </description>
+    </item>
+    
+    <item>
+      <title>Test drive of VENES stack for searching open datasets -Part 1</title>
+      <link>http://www.afsalomon.com/post/test-drive-of-venes-tech-stack/</link>
+      <pubDate>Wed, 15 Nov 2017 00:58:09 -0500</pubDate>
+      
+      <guid>http://www.afsalomon.com/post/test-drive-of-venes-tech-stack/</guid>
+      <description>What is VENES? V Vuejs| E Express| N Nodejs| ES Elasticsearch What we’re building Given several open data sets or dataset apis, the idea is to extract the datasets, transform and load them into an Elasticsearch cluster for fast searches via the Elasticsearch api. Users should be able to type in terms in a text box, google search style, and get instant relevant hits, then they should be able to narrow down their choices using some filtering mechanism.</description>
+    </item>
+    
+  </channel>
+</rss>
