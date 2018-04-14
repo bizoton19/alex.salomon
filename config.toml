@@ -5,7 +5,7 @@ theme = "beautifulhugo"
 pygmentsUseClasses = true
 pygmentCodeFences = true
 metaDataFormat = "yaml"
-comments = true
+comments = false
   
 
 [Params]
