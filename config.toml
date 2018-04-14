@@ -6,6 +6,7 @@ pygmentsUseClasses = true
 pygmentCodeFences = true
 metaDataFormat = "yaml"
 comments = true
+googleAnalytics = "UA-11405119-7"
   
 
 [Params]
