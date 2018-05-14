@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Alex&#39;s blog</title>
+    <link>http://www.afsalomon.com/categories/</link>
+    <description>Recent content in Categories on Alex&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://www.afsalomon.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Programming</title>
+      <link>http://www.afsalomon.com/categories/programming/</link>
+      <pubDate>Sun, 10 Dec 2017 22:14:49 -0500</pubDate>
+      
+      <guid>http://www.afsalomon.com/categories/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>http://www.afsalomon.com/categories/projects/</link>
+      <pubDate>Sun, 10 Dec 2017 22:14:49 -0500</pubDate>
+      
+      <guid>http://www.afsalomon.com/categories/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Technology</title>
+      <link>http://www.afsalomon.com/categories/technology/</link>
+      <pubDate>Sun, 10 Dec 2017 22:14:49 -0500</pubDate>
+      
+      <guid>http://www.afsalomon.com/categories/technology/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

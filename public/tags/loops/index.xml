@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Loops on Alex&#39;s blog</title>
+    <link>http://www.afsalomon.com/tags/loops/</link>
+    <description>Recent content in Loops on Alex&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 03 Dec 2017 21:52:01 -0500</lastBuildDate>
+    
+	<atom:link href="http://www.afsalomon.com/tags/loops/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Evolution of the Many Faced for Loop</title>
+      <link>http://www.afsalomon.com/post/the-evolution-of-the-many-faced-for-loop/</link>
+      <pubDate>Sun, 03 Dec 2017 21:52:01 -0500</pubDate>
+      
+      <guid>http://www.afsalomon.com/post/the-evolution-of-the-many-faced-for-loop/</guid>
+      <description> What are loops? In it&amp;rsquo;s simplest form, a loop is a an action that&amp;rsquo;s being repeated over a period of time or given a specific condition.
+Examples The For loops The functional for loops </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Alex&#39;s blog</title>
+    <link>http://www.afsalomon.com/page/</link>
+    <description>Recent content in Pages on Alex&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 20 Jan 2018 13:11:36 -0500</lastBuildDate>
+    
+	<atom:link href="http://www.afsalomon.com/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About Me</title>
+      <link>http://www.afsalomon.com/page/about/</link>
+      <pubDate>Sat, 20 Jan 2018 13:11:36 -0500</pubDate>
+      
+      <guid>http://www.afsalomon.com/page/about/</guid>
+      <description>Contact Info 9900 Georgia Ave unit 201 Silver Spring, MD 20920 bizoton19@gmail.com
+Education Bachelor of Science in Management Information Systems University of Central Florida Orlando, FL
+Technologies I Use in Projects Platforms : Z/os, Windows, Linux, AWS, Azure, Heroku, Netlify, Github, Mlab, elasticCloud
+Tools: Azure Functions, Powershell, Bash, Git, TFS, SQL Server, DB2, MySql,MongoDB, cUrl, NPM, Hugo, Angular-Cli, Vue-Cli, Azure data tables, Yoeman, MSBuild, Cake
+Programing Languages : C#, Java, Javascript, Go, Scala, SQL, HTML, CSS, Markdown</description>
+    </item>
+    
+  </channel>
+</rss>

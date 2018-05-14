@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Test drive of VENES stack for searching open datasets -Part 1</title>
+  <meta property="og:title" content="Test drive of VENES stack for searching open datasets -Part 1" />
+  <meta name="twitter:title" content="Test drive of VENES stack for searching open datasets -Part 1" />
+  <meta name="description" content="Hosted on a diverse cloud infrastructure ">
+  <meta property="og:description" content="Hosted on a diverse cloud infrastructure ">
+  <meta name="twitter:description" content="Hosted on a diverse cloud infrastructure ">
+  <meta name="author" content="Alex Salomon"/>
+  <meta property="og:image" content="https://avatars2.githubusercontent.com/u/1896566?s=400&u=a237a69974cb51c9cc143a30f387e9a5a720cfb8&v=4" />
+  <meta name="twitter:image" content="https://avatars2.githubusercontent.com/u/1896566?s=400&u=a237a69974cb51c9cc143a30f387e9a5a720cfb8&v=4" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@lex_salomon" />
+  <meta name="twitter:creator" content="@lex_salomon" />
+  <meta property="og:url" content="http://www.afsalomon.com/post/test-drive-of-venes-tech-stack/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Alex&#39;s blog" />
+
+  <meta name="generator" content="Hugo 0.37.1" />
+  <link rel="canonical" href="http://www.afsalomon.com/post/test-drive-of-venes-tech-stack/" />
+  <link rel="alternate" href="" type="application/rss+xml" title="Alex&#39;s blog">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://www.afsalomon.com/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://www.afsalomon.com/css/highlighting.css" />
+  <link rel="stylesheet" href="http://www.afsalomon.com/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="http://www.afsalomon.com/css/highlight.min.css" />
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+</head>
+
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="http://www.afsalomon.com/">Alex&#39;s blog</a>
+
+        </div>
+
+        <div class="collapse navbar-collapse" id="main-navbar">
+
+            <ul class="nav navbar-nav navbar-right">
+
+                 
+                <li>
+                    <a title="Blog " href="/ ">Blog</a>
+                </li>
+                   
+            </ul>
+        </div>
+        
+</nav>
+
+ 
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Test drive of VENES stack for searching open datasets -Part 1</h1>
+                
+                  
+                    <h2 class="post-subheading">Hosted on a diverse cloud infrastructure </h2>
+                  
+                
+                
+                  <span class="post-meta">
+  Posted on November 15, 2017
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+ 
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<h3 id="what-is-venes">What is VENES?</h3>
+
+<p><strong>V</strong>  <a href="https://vuejs.org/">Vuejs</a>|
+<strong>E</strong>  <a href="https://expressjs.com/">Express</a>|
+<strong>N</strong>  <a href="https://nodejs.org/en/">Nodejs</a>|
+<strong>ES</strong> <a href="https://www.elastic.co/products/elasticsearch">Elasticsearch</a>
+<img src="/img/venes.png" alt="stack" /></p>
+
+<h3 id="what-we-re-building">What we’re building</h3>
+
+<p>Given several open data sets or dataset apis, the idea is to extract the datasets, transform and load them into an <a href="https://www.elastic.co/">Elasticsearch</a> cluster for fast searches via the Elasticsearch api. Users should be able to type in terms in a text box, google search style, and get instant relevant hits, then they should be able to narrow down their choices using some filtering mechanism. The ultimate vision is to have a more artifact focused search where users can search on a particular dataset, say recalls, and perform more focused searches.</p>
+
+<h3 id="why-build-it">Why build it?</h3>
+
+<p>Building it out of curiosity really. I noticed a lot of text heavy datasets were being exposed as APIs by different organizations and agencies but it would be benificial to have a search repository where the open datasets/apis are the initial lnding service. There a few reasons why I wanted to build a full unified search application:
+I needed to get familiar with the <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/query-filter-context.html">Elasticsearch DSL</a>, or at least enough of it where I can build these aggregations/facets and filters using a modern web UI framework. The other reason is a learning experience which involves new web tools, different cloud environments for development/hosting and get some real work done with powerful search platform.</p>
+
+<h3 id="the-technology-stack-architecture">The Technology Stack &amp; Architecture</h3>
+
+<p>The idea was to decouple the web front end with the server at development time so that it’s possible to fiddle with different Elasticsearch clients to see which was a better fit for the server side API. The technology behind the api that would proxy the Elasticsearch interfaces is written in NodeJS. The choice was between NodeJS and Golang Follow along and i’ll tell you why later.
+The infrastructure is composed of Heroku for hosting the web app, mlab for possible user management and metrics storage (this could be Postgres, have not decided) and AWS elasticsearch OR elasticcloud, both are eventually on AWS but one is fully managed by the elastic team and one is fully managed by AWS elasticsearch service.</p>
+
+<p><img src="/img/infra.png" alt="infrastructure" /></p>
+
+<h3 id="decision-on-programming-languages-and-technology-stacks">Decision on programming languages and technology stacks</h3>
+
+<h4 id="the-front-end">The front end</h4>
+
+<p>Following the explosion of javascript serverside tooling and frameworks, i built some basic apps with  3 frameworks/libraries (<code>Angular 2</code>, <code>Aurelia</code>, <code>VueJs</code>) and realized that my decision would be based on the framework that gets me the less frustrated (learning curve), because they all had the same goal, simplify javascript development and management while increasing productivity and performance. All three of these frameworks are fantastic, the support, enthusiast and community behing them are excellent, i&rsquo;m not an expert in any of these frameworks but here are is the  main reason i chose vue.</p>
+
+<h4 id="angular">Angular</h4>
+
+<p>Even tough i believe <a href="https://angular.io/">Angular 2</a> is a nice upgrade from AngularJS with the introduction of Typescript and i understand the goal, the framework demanded me to commit and conform too much to a particular style of building apps. If i were building this app within a large team, specially within an organisation, Angular would be my go to language for because the default design of the framework&rsquo;s api mirror the n-tier layered architecure and design patterns that developers have been using in <code>Java</code> and <code>C#</code> for a long time.
+Writing Angular, the right way, the Angular way can be very elegant and easy to maintain in the long run. Now look at <a href="https://angular.io/guide/quickstart#devenv">how to get started with Angular: </a>:</p>
+
+<h5 id="step-1-set-up-your-machine-must-have-npm-installed">Step 1. Set up Your Machine (must have NPM installed)</h5>
+
+<pre><code>npm install -g @angular/cli
+</code></pre>
+
+<h5 id="step-2-create-new-project">Step 2. Create new Project</h5>
+
+<pre><code>ng new ang-app
+</code></pre>
+
+<hr />
+
+<h4 id="aurelia">Aurelia</h4>
+
+<p><a href="http://aurelia.io/">Aurelia</a> with typescript was very similar to Angular but it opted for present and future ECMAscript syntax. I thought it was great, if Aurelia had the support of Angular, i would chose Aurelia over Angular for building large apps with large teams within an organisation. The support is fanstastic but depending on the organisation, they tend to go with the products that are backed by the biggest companies. <a href="http://aurelia.io/docs/tutorials/creating-a-todo-app">The getting started</a>:</p>
+
+<h5 id="step-1-set-up-your-machine-must-have-npm-installed-1">Step 1. Set up Your Machine (must have NPM installed)</h5>
+
+<pre><code>npm install -aurelia-cli -g
+</code></pre>
+
+<h5 id="step-2-create-new-project-1">Step 2. Create new project</h5>
+
+<pre><code>au new
+</code></pre>
+
+<hr />
+
+<h4 id="vue">Vue</h4>
+
+<p><a href="https://vuejs.org/">Vue</a> is all about keeping the cognitive mental model of an isolated component in «now memory». The Vue components are self contained, they accept data/commands as inputs, animate and/or produce events and come alive. I hit the ground running pretty fast with Vue and never looked back. the documenation pages have live js fiddle code that you can get quick hands on practice with after reading the concepts. The getting started is as simple as that. Of course to build a full blown <a href="https://blog.angular-university.io/why-a-single-page-application-what-are-the-benefits-what-is-a-spa/">single page app</a>, your getting started will look more like the two other previously mentioned framework but the simple version focuses on just the view layer, no routing , no need to have npm or node installed as a pre-requisite. You can also slowly upgrade a legacy application, which are usually written in a composition of JSP/Javascript/Flash or ASP.net/Javascript/Flash etc.
+ To get started:</p>
+
+<h5 id="step-1-drop-this-reference-in-a-new-or-existig-web-project-or-in-js-fiddle">Step 1. Drop this reference in a new or existig web project or in js fiddle</h5>
+
+<pre><code>&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<h5 id="step-2-happy-coding">Step 2. Happy Coding!</h5>
+
+<p>Declare the main div tag where the vue instance will interact with the DOM (Document Object Model)</p>
+
+<pre><code class="language-html">&lt;div id=&quot;app&quot;&gt;
+  {{ message }}
+&lt;/div&gt;
+</code></pre>
+
+<p>Declare a vue instance in your javascript file and reference the main div tag created earlier</p>
+
+<pre><code class="language-javascript">var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+</code></pre>
+
+<p>Serving your html file should now show you</p>
+
+<pre><code>Hello Vue!
+</code></pre>
+
+<p>Alternatively, use the <code>vue-cli</code> for users familiar with nodejs and it&rsquo;s build tools. This will allow you to build a full single page app just like Angular and Aurelia&rsquo;s cli tools.</p>
+
+<h5 id="step-1-set-up-your-machine-must-have-npm-installed-2">Step 1. Set up Your Machine (must have NPM installed)</h5>
+
+<pre><code>npm install --global vue-cli
+</code></pre>
+
+<h5 id="step-2-create-new-project-2">Step 2. Create new project</h5>
+
+<pre><code>vue init webpack vue-app
+</code></pre>
+
+<p>Here is a teaser of what the current Vue js based search page looks like. My elasticsearch instance is still local and the api proxy to elasticsearch is not yet stable:</p>
+
+<p><img src="/img/ui-teaser.gif" alt="stack" /></p>
+
+<h4 id="the-elasticsearch-proxy-apis">The Elasticsearch proxy APIs</h4>
+
+<p>I wanted a dynamic/semi dynamic or lightweight language which means I had to learn something else.
+I chose Nodejs because well, Javascript… I originally started with Golang but the offical Go elasticsearch client is not yet mature. There is another open source <a href="http://olivere.gitub.io/elastic/">Go client</a> although it’s highly performant and is constantly improving, my instincts told me to go with <a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/index.html">elaticsearch.js</a>. It seems a natural fit given the Restful nature of the elasticsearch API. Here is an example of what an elasticsearch query looks like from the elasticsearch Restful API :</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="ln"> 1</span><span class="err">GET</span> <span class="err">/*/_search</span>
+<span class="ln"> 2</span><span class="p">{</span>
+<span class="ln"> 3</span>  <span class="nt">&#34;query&#34;</span><span class="p">:</span> <span class="p">{</span>
+<span class="ln"> 4</span>    <span class="nt">&#34;bool&#34;</span><span class="p">:</span> <span class="p">{</span>
+<span class="ln"> 5</span>      <span class="nt">&#34;must&#34;</span><span class="p">:</span> <span class="p">[</span>
+<span class="ln"> 6</span>        <span class="p">{</span>
+<span class="ln"> 7</span>          <span class="nt">&#34;match&#34;</span><span class="p">:</span> <span class="p">{</span>
+<span class="ln"> 8</span>            <span class="nt">&#34;_all&#34;</span><span class="p">:</span> <span class="s2">&#34;poison&#34;</span>
+<span class="ln"> 9</span>          <span class="p">}</span>
+<span class="ln">10</span>        <span class="p">}</span>
+<span class="ln">11</span>      <span class="p">],</span>
+<span class="ln">12</span>          <span class="nt">&#34;filter&#34;</span><span class="p">:</span> <span class="p">{</span>
+<span class="ln">13</span>        <span class="nt">&#34;bool&#34;</span><span class="p">:</span> <span class="p">{</span>
+<span class="ln">14</span>          <span class="nt">&#34;must&#34;</span><span class="p">:</span> <span class="p">[</span>
+<span class="ln">15</span>            
+<span class="ln">16</span>            <span class="p">{</span>
+<span class="ln">17</span>              <span class="nt">&#34;terms&#34;</span><span class="p">:</span> <span class="p">{</span>
+<span class="ln">18</span>                <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="p">[</span>
+<span class="ln">19</span>                  <span class="s2">&#34;recall&#34;</span>
+<span class="ln">20</span>                <span class="p">]</span>
+<span class="ln">21</span>                
+<span class="ln">22</span>              <span class="p">}</span>
+<span class="ln">23</span>            <span class="p">},</span>
+<span class="ln">24</span>            <span class="p">{</span>
+<span class="ln">25</span>              <span class="nt">&#34;terms&#34;</span><span class="p">:</span> <span class="p">{</span>
+<span class="ln">26</span>                <span class="nt">&#34;category.keyword&#34;</span><span class="p">:</span> <span class="p">[</span>
+<span class="ln">27</span>                  <span class="s2">&#34;Consumer Products&#34;</span><span class="p">,</span><span class="s2">&#34;Foods, Medicines, Cosmetics&#34;</span>
+<span class="ln">28</span>                <span class="p">]</span>
+<span class="ln">29</span>                
+<span class="ln">30</span>              <span class="p">}</span>
+<span class="ln">31</span>            <span class="p">},</span>
+<span class="ln">32</span>            
+<span class="ln">33</span>            <span class="p">{</span>
+<span class="ln">34</span>              <span class="nt">&#34;terms&#34;</span><span class="p">:</span> <span class="p">{</span>
+<span class="ln">35</span>                <span class="nt">&#34;artifactSource&#34;</span><span class="p">:</span> <span class="p">[</span>
+<span class="ln">36</span>                  <span class="s2">&#34;cpsc&#34;</span><span class="p">,</span><span class="s2">&#34;fda&#34;</span>
+<span class="ln">37</span>                <span class="p">]</span>
+<span class="ln">38</span>                
+<span class="ln">39</span>              <span class="p">}</span>
+<span class="ln">40</span>            <span class="p">},</span>
+<span class="ln">41</span>            
+<span class="ln">42</span>             
+<span class="ln">43</span>            <span class="p">{</span>
+<span class="ln">44</span>              <span class="nt">&#34;range&#34;</span><span class="p">:</span> <span class="p">{</span>
+<span class="ln">45</span>                <span class="nt">&#34;artifactDate&#34;</span><span class="p">:</span> <span class="p">{</span>
+<span class="ln">46</span>                  <span class="nt">&#34;gte&#34;</span><span class="p">:</span> <span class="s2">&#34;1970-09-20&#34;</span><span class="p">,</span>
+<span class="ln">47</span>                  <span class="nt">&#34;lte&#34;</span><span class="p">:</span> <span class="s2">&#34;2019-09-26&#34;</span>
+<span class="ln">48</span>                <span class="p">}</span>
+<span class="ln">49</span>              <span class="p">}</span>
+<span class="ln">50</span>            <span class="p">}</span>
+<span class="ln">51</span>          <span class="p">]</span>
+<span class="ln">52</span>        <span class="p">}</span>
+<span class="ln">53</span>      <span class="p">}</span>
+<span class="ln">54</span>    
+<span class="ln">55</span>    <span class="p">}</span>
+<span class="ln">56</span>    
+<span class="ln">57</span>  
+<span class="ln">58</span>  <span class="p">},</span>
+<span class="ln">59</span>  <span class="nt">&#34;size&#34;</span><span class="p">:</span><span class="s2">&#34;10&#34;</span><span class="p">,</span>
+<span class="ln">60</span>  
+<span class="ln">61</span>  <span class="nt">&#34;aggregations&#34;</span><span class="p">:</span> <span class="p">{</span>
+<span class="ln">62</span>    <span class="nt">&#34;artifact_type&#34;</span><span class="p">:</span> <span class="p">{</span>
+<span class="ln">63</span>      <span class="nt">&#34;terms&#34;</span><span class="p">:</span> <span class="p">{</span>
+<span class="ln">64</span>        <span class="nt">&#34;field&#34;</span><span class="p">:</span> <span class="s2">&#34;type.keyword&#34;</span>
+<span class="ln">65</span>        
+<span class="ln">66</span>      <span class="p">}</span>
+<span class="ln">67</span>    <span class="p">},</span>
+<span class="ln">68</span>    <span class="nt">&#34;artifact_category&#34;</span><span class="p">:</span> <span class="p">{</span>
+<span class="ln">69</span>      <span class="nt">&#34;terms&#34;</span><span class="p">:</span> <span class="p">{</span>
+<span class="ln">70</span>        <span class="nt">&#34;field&#34;</span><span class="p">:</span> <span class="s2">&#34;category.keyword&#34;</span>
+<span class="ln">71</span>      <span class="p">}</span>
+<span class="ln">72</span>    <span class="p">},</span>
+<span class="ln">73</span>
+<span class="ln">74</span>    <span class="nt">&#34;artifact_source&#34;</span><span class="p">:</span> <span class="p">{</span>
+<span class="ln">75</span>      <span class="nt">&#34;terms&#34;</span><span class="p">:</span> <span class="p">{</span>
+<span class="ln">76</span>        <span class="nt">&#34;field&#34;</span><span class="p">:</span> <span class="s2">&#34;artifactSource.keyword&#34;</span>
+<span class="ln">77</span>      <span class="p">}</span>
+<span class="ln">78</span>    <span class="p">}</span>
+<span class="ln">79</span>  <span class="p">}</span>
+<span class="ln">80</span><span class="p">}</span></code></pre></div>
+
+<p>This elasticsearch query performs a search where the word <em>fire</em> is present, the <code>&quot;match&quot;: {
+                    &quot;_all&quot;: &quot;poison&quot;
+                }</code>
+                  predicate tells elasticsearch to look for the word <em>poison</em> in every field in the document that has text data and then perform a filter on the result where the only data that gets return are of type <strong>fdarecall</strong> AND are between 1970 and 2009. The data is then sorted by type and artifact date. Then an aggregation object is also returned which retrieves the number of indexed documents that meet all the conditions of the aggregation
+In <code>SQL</code> syntax the equivalent would roughly be :</p>
+
+<pre><code class="language-sql">SELECT [fields] FROM index_name 
+WHERE fulltext_field LIKE '%poison%'
+AND _type = 'fdarecall'
+AND artifactDate BETWEEN '1970-09-20' AND '2009-09-26'
+GROUP BY artifact_Source, artifact_type
+ORDER BY _type, artifactDate DESC
+</code></pre>
+
+<p>The only difference is that, this query would <strong>NOT</strong> run in the SQL engine because you have to specify the fields that are going to be grouped and you can&rsquo;t really mix aggregation queries with resultset in one simple SQL command. You&rsquo;de have to write a much more complicated and lenghty query.</p>
+
+<p>We can even reduce the verbosity of the Json queries with the <a href="http://bodybuilder.js.org/">bodybuilder</a> javascript package  by writing something like this (not tested yet, i want to make sure i can execute with the raw DSL first) :</p>
+
+<pre><code class="language-javascript">bodybuilder()
+        .query('match', '_all', 'poison')
+        .Filter('terms', '_type', 'fdarecall')
+        .andFilter('range', 'artifactDate', [{ to: '2009-09-26' }, { from: '1970-09-20' }])
+        .sort('_type','desc')
+        .sort('artifactDate','desc')
+        .aggregation('terms', 'type.keyword')
+        .aggregation('terms','artifactSource.keyword')
+        .build()
+</code></pre>
+
+<h3 id="mapping-the-datasets-for-indexing">Mapping the datasets for indexing</h3>
+
+<p>The mapping, transformation etc. of dataset fields to indexes is a stand alone ETL program, once that&rsquo;s finalized, i will also write a post about it. The basic structure of the initial search index will follow this data contract in order to be included in the home page&rsquo;s search results:</p>
+
+<pre><code class="language-csharp"> public interface IArtifact:IDataCategoryType
+    {
+        String UUID { get;  }
+        String Title { get; set; }
+        DateTime ArtifactDate { get;  }
+        string ArtifactSource { get; }
+        string Description { get;  }
+        string Category { get; }
+        string FullTextSearch { get;set;}
+    }
+</code></pre>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+        
+          <li class="next">
+            <a href="http://www.afsalomon.com/post/the-evolution-of-the-many-faced-for-loop/" data-toggle="tooltip" data-placement="top" title="The Evolution of the Many Faced for Loop">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
+      
+        
+      
+
+    </div>
+  </div>
+</div>
+ <footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center footer-links">
+                    
+                    <li>
+                        <a href="https://github.com/bizoton19" title="GitHub">
+                            <span class="fa-stack fa-md">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x text-primary"></i>
+                  </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/lex_salomon" title="Twitter">
+                            <span class="fa-stack fa-md">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x text-primary"></i>
+                  </span>
+                        </a>
+                    </li> 
+                    <li>
+                        <a href="" title="RSS">
+                            <span class="fa-stack fa-md">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x  text-primary"></i>
+              </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="credits copyright text-muted">
+                      Alex Salomon   &nbsp;&bull;&nbsp; 2018  &nbsp;&bull;&nbsp;
+                    <a href="http://www.afsalomon.com/%20">Alex&#39;s blog</a> 
+                </p>
+                
+                <p class="credits theme-by text-muted">
+                    <a href="http://gohugo.io">Hugo v0.37.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> 
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://www.afsalomon.com/js/main.js"></script>
+<script src="http://www.afsalomon.com/js/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script><script>
+    renderMathInElement(document.body);
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+<script src="http://www.afsalomon.com/js/load-photoswipe.js"></script>
+
+
+</body>
+
+</html>
