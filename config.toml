@@ -1,4 +1,4 @@
-baseURL = "http://www.afsalomon.com/"
+baseURL = "https://www.afsalomon.com/"
 languageCode = "en-us"
 title = "Alex's blog"
 theme = "beautifulhugo"
