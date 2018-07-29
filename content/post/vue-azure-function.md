@@ -3,7 +3,7 @@ title: "Vue Azure Function"
 date: 2018-07-22T16:56:44-04:00
 categories: [Projects, Technology, Programming, Cloud]
 tags: ["vue", "azure functions","javascript","async","lambda"]
-draft: true
+draft: false
 ---
 
 In this post, i will talk about how i built a pretty naive and primitive dashboard that displays the status of any URLs. The dashboard's interface is a `Vue.js` application with an `Azure function` backend. i will first give an overview of the app with it's architecture and the different technologies involved. I will focus more on the process and architecture rather than a step by step or code diving.
