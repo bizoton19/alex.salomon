@@ -19,7 +19,7 @@ If an unsuccessful return code is read for one or more site, the application agg
 The current architecure of the site status poller is depicted in the image below.
 The app is hosted on [Netlify](https://www.netlify.com) which detects code changes on the master git branch and deploys it to...wherever. You don't have to use netlify of course, you can chose any hosting company. The web UI is a simple bootstrap/Vue app, created using the [Vue CLI 3.0](https://cli.vuejs.org/)  and Bootstrap 4.
 
-![architecture](https://github.com/asalomon-cpsc/site-status-web/raw/master/azure_poller_architecture.png
+![architecture](https://github.com/bizoton19/site-status-web/raw/master/azure_poller_architecture.png
 "architecture")
 
 
@@ -36,7 +36,7 @@ The alerter module of the application is powered by [SendGrid](https://sendgrid.
 ### The Back end
 I actually started with the back end first. I started with creating the azure functions. I had written a [polling program](https://github.com/bizoton19/site-status-notification-csharp) when i started familiarizing myself with `async await` in `.NET` where most of the code that i needed was already written but had to make some changes to it when porting to azure functions.
 
-![architecture](https://github.com/asalomon-cpsc/azure-functions/raw/master/azure_functions_architecture.jpg "architecture")
+![architecture](https://github.com/bizoton19/azure-functions/raw/master/azure_functions_architecture.jpg "architecture")
 
 As you can see in the folder structure below, the function names sort of matches the architecture layout image above. I realized that i had to decompose the modules in the original program into smaller functions in order to fully embrace the idea of lambda functions.
 
@@ -46,18 +46,18 @@ As you can see in the folder structure below, the function names sort of matches
 
 * The http poller function, *pollerTrigger* gets initiated by a pre defined poller trigger
                                           
-* The poller function, [*statusPoller_http*](https://github.com/asalomon-cpsc/azure-functions/blob/master/statusPoller_http/run.csx) reads a list of urls by calling the [*statusUrlListReader*](https://github.com/asalomon-cpsc/azure-functions/blob/master/statusSiteStateReader/run.csx) function. The urls are stored in an azure storage table called **urlTable**.
+* The poller function, [*statusPoller_http*](https://github.com/bizoton19/azure-functions/blob/master/statusPoller_http/run.csx) reads a list of urls by calling the [*statusUrlListReader*](https://github.com/bizoton19/azure-functions/blob/master/statusSiteStateReader/run.csx) function. The urls are stored in an azure storage table called **urlTable**.
 
 * Then for each url retrieved from the **urlTable** , an http web request is triggered for the url/resource.
 
 * The resultsets are aggregated and sent to two queues, **status-states-queue** & **status-history-queue**, for additional processing. All errors are sent to the *status-errors-queue*.
 
-* Then the [*statusQueuePersister*](https://github.com/asalomon-cpsc/azure-functions/blob/master/statusQueuePersister/run.csx)  grabs the message in the **status-states-queue** to save it in the azure storage table named **statusesTable** . The [*statusHistoryQueuePersiter*](https://github.com/asalomon-cpsc/azure-functions/blob/master/statusHistoryQueuePersister/run.csx) also grabs the message from the **status-history-queue** to save them in the azure storage table named **statusHistoryTable**.
+* Then the [*statusQueuePersister*](https://github.com/bizoton19/azure-functions/blob/master/statusQueuePersister/run.csx)  grabs the message in the **status-states-queue** to save it in the azure storage table named **statusesTable** . The [*statusHistoryQueuePersiter*](https://github.com/bizoton19/azure-functions/blob/master/statusHistoryQueuePersister/run.csx) also grabs the message from the **status-history-queue** to save them in the azure storage table named **statusHistoryTable**.
 
-* If there are any errors, the email alerter function, [*emailAlerter_csharp*](https://github.com/asalomon-cpsc/azure-functions/blob/master/emailAlerter_csharp/run.csx), will retrieve the errors from the **status-errors-queue** and send an email alert to pre configured recipients via the *sendGrid* service.
+* If there are any errors, the email alerter function, [*emailAlerter_csharp*](https://github.com/bizoton19/azure-functions/blob/master/emailAlerter_csharp/run.csx), will retrieve the errors from the **status-errors-queue** and send an email alert to pre configured recipients via the *sendGrid* service.
 
 ### Dashboard Functions
-* The [*urlPersister*](https://github.com/asalomon-cpsc/azure-functions/blob/master/urlPersister/run.csx) function receives a new URL from the dashboard and saves it to a queue, then the [*UrlQueuePersister*](https://github.com/asalomon-cpsc/azure-functions/blob/master/statusQueuePersister/run.csx) function grabs that URL to persist it in the **urlTable**
+* The [*urlPersister*](https://github.com/bizoton19/azure-functions/blob/master/urlPersister/run.csx) function receives a new URL from the dashboard and saves it to a queue, then the [*UrlQueuePersister*](https://github.com/bizoton19/azure-functions/blob/master/statusQueuePersister/run.csx) function grabs that URL to persist it in the **urlTable**
 
 * The statusPoller_http is also triggered via the web dashboard in order to refresh the dashboard. The code snippet below shows the declaration of the azure function end points from the `vue.js` dashboard.
 
@@ -98,7 +98,7 @@ export default {
 
 
 ```
-code can be found [here](https://github.com/asalomon-cpsc/site-status-web/blob/master/src/components/Poller.vue)
+code can be found [here](https://github.com/bizoton19/site-status-web/blob/master/src/components/Poller.vue)
 
 ### Complexity
 
@@ -210,4 +210,3 @@ Those interfaces each represent the "subscribing" queues, per example, the `hist
 * Portability/Ownership
 * Serverless eventually means relinquishing control over to the cloud vendor..Or you can be more strategic about your serverless architecture, smaller is more portable and less painful to rewrite!
 * Rely on vendor for language feature and versions of language support
-
