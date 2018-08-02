@@ -107,7 +107,7 @@ The reason why the logical architecture seems complex is because thinking in ter
 Now the reason why the architecture seems *overly* complex for an app as simple as a poller? 
 Well the direction i **should** have taken was to use a service broker such as [azure service bus](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-service-bus) since we're already in the eco-system. 
 
-The service bus would allow me to do a single publish with multiple subscribers, as opposed to receiving three different `ICollector` interfaces which is being injected into the azure function instance at runtime as showed in the `C# ` code below.
+The service bus would allow me to do a single publish with multiple subscribers, as opposed to receiving three different `ICollector` interfaces which are being injected into the azure function instance at runtime as shown in the `C# ` code below.
 
 ```csharp
 
@@ -202,6 +202,7 @@ Those interfaces each represent the "subscribing" queues, per example, the `hist
 The [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/) tool allows you query the storage queues, tables or log files.
 
 ![azure function folders](/img/az-storage-explorer.png)
+
 ### The Pros
 * Decoupled
 * Fast
