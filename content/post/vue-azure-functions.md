@@ -6,7 +6,7 @@ tags: ["vue", "azure functions","javascript","async","lambda"]
 draft: false
 ---
 
-In this post, i will talk about how i built a pretty naive and primitive dashboard that displays the status of any URLs. The dashboard's interface is a `Vue.js` application with an `Azure function` backend. i will first give an overview of the app with it's architecture and the different technologies involved. I will focus more on the process and architecture rather than a step by step or code diving (Will probably right a series for this).
+In this post, i will talk about how i built a pretty naive and primitive dashboard that displays the status of any URLs. The dashboard's interface is a `Vue.js` application with an `Azure function` backend. I will first give an overview of the app with it's architecture and the different technologies involved. I will focus more on the process and architecture rather than a step by step or code diving (Will probably write a series for this).
 
 The prupose is to provide a simple but contextual level of monitoring to any website or sections of public websites or http APIs.
 It uses http polling to ping the website and attempts to read the website or http service's content after getting a successfull http return code.
@@ -197,8 +197,11 @@ Those interfaces each represent the "subscribing" queues, per example, the `hist
   ],
   "disabled": false
 }
-
 ```
+
+The [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/) tool allows you query the storage queues, tables or log files.
+
+![azure function folders](/img/az-storage-explorer.png)
 ### The Pros
 * Decoupled
 * Fast
