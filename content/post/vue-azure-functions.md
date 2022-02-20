@@ -102,8 +102,6 @@ code can be found [here](https://github.com/bizoton19/site-status-web/blob/maste
 
 ### Complexity
 
-The reason why the logical architecture seems complex is because thinking in terms of micro services, is a complex notion. The notion that failure in the operation pipeline is not an option, monolithic deployments and maintenance is no longer an option.
-
 Now the reason why the architecture seems *overly* complex for an app as simple as a poller? 
 Well the direction i **should** have taken was to use a service broker such as [azure service bus](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-service-bus) since we're already in the eco-system. 
 
